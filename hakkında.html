@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Deneme Sitesi</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      padding: 64px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both
+    }
+
+    .column-66 {
+      float: left;
+      width: 66.66666%;
+      padding: 20px;
+    }
+
+    .column-33 {
+      float: left;
+      width: 33.33333%;
+      padding: 20px;
+    }
+
+    .large-font {
+      font-size: 48px;
+    }
+
+    .xlarge-font {
+      font-size: 64px
+    }
+
+    .button {
+      border: none;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #000000;
+    }
+
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+
+      .column-66,
+      .column-33 {
+        width: 100%;
+        text-align: center;
+      }
+
+      img {
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-button">HOME</a>
+      <a href="hakkında.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>GAMES</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="oyunlar.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>FOR MORE</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    </div>
+  </div>
+
+  <!-- The App Section -->
+  <div class="container" style="background-color: #b9b9b9;">
+    <div class="row">
+      <div class="column-66">
+        <h1 class="xlarge-font"><b>The App</b></h1>
+        <h1 class="large-font" style="color:mediumseagreen;"><b>Why buy it?</b></h1>
+        <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="button">Download Application</button>
+      </div>
+      <div class="column-33">
+        <img src="resim/crysis.jpg" width="600" height="600" style="border-radius: 40px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Clarity Section -->
+  <div class="container" style="background-color:#7e7e7e">
+    <div class="row">
+      <div class="column-33">
+        <img src="resim/dead space.jpg" alt="App" width="600" height="600" style="border-radius:40px;">
+      </div>
+      <div class="column-66">
+        <h1 class="xlarge-font"><b>Clarity</b></h1>
+        <h1 class="large-font" style="color:mediumseagreen;"><b>Pixels, who?</b></h1>
+        <p><span style="font-size:24px">A revolution in resolution.</span> Sharp and clear photos with the world's best
+          photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <button class="button" style="background-color:rgb(0, 0, 0)">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- The App Section -->
+  <div class="container" style="background-color: #525252;">
+    <div class="row">
+      <div class="column-66">
+        <h1 class="xlarge-font"><b>The App</b></h1>
+        <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why buy it?</b></h1>
+        <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <button class="button">Download Application</button>
+      </div>
+      <div class="column-33">
+        <img src="resim/calisto.jpg" width="600" height="600" style="border-radius: 40px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Clarity Section -->
+  <div class="container" style="background-color:#3c3c3c">
+    <div class="row">
+      <div class="column-33">
+        <img src="resim/elden ring.jpg" alt="App" width="600" height="600" style="border-radius:40px;">
+      </div>
+      <div class="column-66">
+        <h1 class="xlarge-font"><b>Clarity</b></h1>
+        <h1 class="large-font" style="color:mediumseagreen;"><b>Pixels, who?</b></h1>
+        <p><span style="font-size:24px">A revolution in resolution.</span> Sharp and clear photos with the world's best
+          photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <button class="button" style="background-color:rgb(0, 0, 0)">Read More</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="hakkında.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <b>Darkness Gaming</b></p>
+</footer>
+</body>
+
+</html>
