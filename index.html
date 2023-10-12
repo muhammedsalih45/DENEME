@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Deneme sitesi</title>
   <meta charset="UTF-8">
@@ -8,129 +9,167 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+    .box {
+      transition: 1s;
+    }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-      
-      /* Full-width input fields */
-      input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
+    .box:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Full-width input fields */
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    /* Set a style for all buttons */
+    .button1 {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+
+    /* Center the image and position the close button */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+    }
+
+    img.avatar {
+      width: 30%;
+      border-radius: 20%;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto;
+      /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+      from {
+        -webkit-transform: scale(0)
       }
-      
-      /* Set a style for all buttons */
-      .button1 {
-        background-color: #04AA6D;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
+
+      to {
+        -webkit-transform: scale(1)
       }
-      
-      button:hover {
-        opacity: 0.8;
+    }
+
+    @keyframes animatezoom {
+      from {
+        transform: scale(0)
       }
-      
-      /* Extra styles for the cancel button */
-      .cancelbtn {
-        width: auto;
-        padding: 10px 18px;
-        background-color: #f44336;
+
+      to {
+        transform: scale(1)
       }
-      
-      /* Center the image and position the close button */
-      .imgcontainer {
-        text-align: center;
-        margin: 24px 0 12px 0;
-        position: relative;
-      }
-      
-      img.avatar {
-        width: 30%;
-        border-radius: 20%;
-      }
-      
-      .container {
-        padding: 16px;
-      }
-      
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
       span.psw {
-        float: right;
-        padding-top: 16px;
-      }
-      
-      /* The Modal (background) */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        padding-top: 60px;
-      }
-      
-      /* Modal Content/Box */
-      .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-      }
-      
-      /* The Close Button (x) */
-      .close {
-        position: absolute;
-        right: 25px;
-        top: 0;
-        color: #000;
-        font-size: 35px;
-        font-weight: bold;
-      }
-      
-      .close:hover,
-      .close:focus {
-        color: red;
-        cursor: pointer;
-      }
-      
-      /* Add Zoom Animation */
-      .animate {
-        -webkit-animation: animatezoom 0.6s;
-        animation: animatezoom 0.6s
-      }
-      
-      @-webkit-keyframes animatezoom {
-        from {-webkit-transform: scale(0)} 
-        to {-webkit-transform: scale(1)}
-      }
-        
-      @keyframes animatezoom {
-        from {transform: scale(0)} 
-        to {transform: scale(1)}
-      }
-      
-      /* Change styles for span and cancel button on extra small screens */
-      @media screen and (max-width: 300px) {
-        span.psw {
-           display: block;
-           float: none;
-        }
-        .cancelbtn {
-           width: 100%;
-        }
+        display: block;
+        float: none;
       }
 
-    body,h1,h2,h3,h4,h5,h6 {
+      .cancelbtn {
+        width: 100%;
+      }
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: "Lato", sans-serif;
     }
 
@@ -209,8 +248,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
       <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>GAMES</a>
       <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
       <a href="oyunlar.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>FOR MORE</a>
-      <button class="w3-bar-item w3-button w3-hide-small" style="margin-top: auto;" onclick="toggleDarkMode()">CHANGE MODE</button>
-      <button onclick="document.getElementById('id01').style.display='inline-block'" style="margin-top:auto;" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">Login</button>
+      <button class="w3-bar-item w3-button w3-hide-small" style="margin-top: auto;" onclick="toggleDarkMode()">CHANGE
+        MODE</button>
+      <button onclick="document.getElementById('id01').style.display='inline-block'" style="margin-top:auto;"
+        class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">Login</button>
       <script>
         var isDarkMode = false;
 
@@ -221,11 +262,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
           if (isDarkMode) {
             element.style.backgroundColor = "#202121";
             element.style.color = "white";
-            
+
           } else {
-            element.style.backgroundColor = "white"; 
-            element.style.color = "black"; 
-            
+            element.style.backgroundColor = "white";
+            element.style.color = "black";
+
           }
         }
       </script>
@@ -234,43 +275,45 @@ body {font-family: Arial, Helvetica, sans-serif;}
       </a>
       <!--  -->
       <div id="id01" class="modal">
-      <form class="modal-content animate">
+        <form class="modal-content animate">
           <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+              title="Close Modal">&times;</span>
             <img src="" alt="Avatar" class="avatar">
           </div>
-      
+
           <div class="container">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
-      
+
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
-              
-            <button type="submit">Login</button>
+
+            <button class="button1" type="submit">Login</button>
             <label>
               <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
           </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+
+          <div class="container" style="background-color:#ffffff">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn button1">Cancel</button>
+            <span class="psw">Forgot <a href="#" style="color: blue; text-decoration: none;">password?</a></span>
           </div>
         </form>
       </div>
-      
+
       <script>
-      // Get the modal
-      var modal = document.getElementById('id01');
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
           if (event.target == modal) {
-              modal.style.display = "none";
+            modal.style.display = "none";
           }
-      }
-      </script>     
+        }
+      </script>
 
     </div>
 
@@ -286,8 +329,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <!-- First Parallax Image with Logo Text -->
   <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WELCOME<span
-          class="w3-hide-small"> TO MY </span> WEB SİTE</span>
+      <a href="index.html" style="text-decoration: none;"><span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WELCOME<span
+          class="w3-hide-small"> TO MY </span> WEB SİTE</span></a>
     </div>
   </div>
 
@@ -365,46 +408,46 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them
         bigger</em></p><br>
 
-    <!--games-->    
+    <!--games-->
     <div class="w3-row-padding w3-center">
-      <div class="w3-col m3">        
+      <div class="w3-col m3 box">
         <img src="resim/ghost of.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Ghost Of Thushima">
       </div>
 
-      <div class="w3-col m3">
+      <div class="w3-col m3 box">
         <img src="resim/call of duty.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Call Of Duty Modern Warfare">
       </div>
 
-      <div class="w3-col m3">
+      <div class="w3-col m3 box">
         <img src="resim/calisto.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Calisto Protocol">
       </div>
 
-      <div class="w3-col m3">
+      <div class="w3-col m3 box">
         <img src="resim/detroit.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Detroit Became Human">
       </div>
     </div>
 
     <div class="w3-row-padding w3-center w3-section">
-      <div class="w3-col m3">
+      <div class="w3-col m3 box">
         <img src="resim/days gone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Days Gone">
       </div>
 
-      <div class="w3-col m3">
+      <div class="w3-col m3 box">
         <img src="resim/elden ring.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Elden Ring">
       </div>
 
-      <div class="w3-col m3">
+      <div class="w3-col m3 box">
         <img src="resim/need for speed.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Need For Speed">
       </div>
 
-      <div class="w3-col m3">
+      <div class="w3-col m3 box">
         <img src="resim/little.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Little Nightmares">
       </div>
@@ -437,8 +480,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     <div class="w3-row w3-padding-32 w3-section">
       <div class="w3-col m4 w3-container">
-        <img src="resim/alien.jpg" style="border-radius: 50px;" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
-          width="500" height="333">
+        <img src="resim/alien.jpg" style="border-radius: 50px;"
+          class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
       </div>
       <div class="w3-col m8 w3-panel">
         <div class="w3-large w3-margin-bottom">
@@ -447,16 +490,19 @@ body {font-family: Arial, Helvetica, sans-serif;}
           <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@gmail.com<br>
         </div>
         <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-        <form action="/action_page.php" target="_blank">
+        <form>
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name  Surname" required name="Name">
+              <input style="border-radius: 30px;" class="w3-input w3-border" type="text" placeholder="Name  Surname"
+                required name="Name">
             </div>
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              <input style="border-radius: 30px;" class="w3-input w3-border" type="text" placeholder="Email" required
+                name="Email">
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <input style="border-radius: 30px;" class="w3-input w3-border" type="text" placeholder="Message" required
+            name="Message">
           <button class="w3-button w3-black w3-right w3-section" type="submit">
             <i class="fa fa-paper-plane"></i> SEND MESSAGE</button>
         </form>

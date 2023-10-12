@@ -9,6 +9,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+    .box {
+      margin-top: auto;
+      width: 300px;
+      height: 300px;
+      transition: 1s;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      z-index: 1;
+    }
+
     body,
     h1,
     h2,
@@ -19,21 +31,23 @@
       font-family: "Lato", sans-serif;
     }
 
-  .game-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .game-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-  .game-container .w3-col {
-    width: calc(25% - 16px); /* 25% genişlik, 16px boşluk bırakma */
-    margin: 8px;
-  }
+    .game-container .w3-col {
+      width: calc(25% - 16px);
+      /* 25% genişlik, 16px boşluk bırakma */
+      margin: 8px;
+    }
 
-  .game-container img {
-    width: 100%;
-    cursor: pointer;
-  }
+    .game-container img {
+      width: 100%;
+      cursor: pointer;
+    }
+
     body,
     html {
       height: 100%;
@@ -143,8 +157,8 @@
   <!-- First Parallax Image with Logo Text -->
   <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WELCOME<span
-          class="w3-hide-small"> TO</span> GAMES SİTE </span>
+      <a href="oyunlar.html" style="text-decoration: none;"><span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WELCOME<span
+          class="w3-hide-small"> TO</span> GAMES SİTE </span></a>
     </div>
   </div>
 
@@ -167,87 +181,88 @@
       adventure Games
     </div>
   </div>
-  
-    <!-- Second Parallax Image with Portfolio Text -->
-    <div class="bgimg-2 w3-display-container w3-opacity-min">
-      <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">SOME VİDEO GAMES</span>
-      </div>
+
+  <!-- Second Parallax Image with Portfolio Text -->
+  <div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">SOME VİDEO GAMES</span>
     </div>
+  </div>
 
 
   <!--games-->
   <div class="game-container" style="margin-top: 30px;">
-    <div class="w3-col m3">
+    <div class="w3-col m3 box">
       <img src="resim/ghost of.png" onclick="onClick(this)" alt="Ghost Of Tsushima">
     </div>
-  
-    <div class="w3-col m3">
+
+    <div class="w3-col m3 box">
       <img src="resim/call of duty.jpg" onclick="onClick(this)" alt="Call Of Duty Modern Warfare">
     </div>
-  
-    <div class="w3-col m3">
+
+    <div class="w3-col m3 box">
       <img src="resim/calisto.jpg" onclick="onClick(this)" alt="Calisto Protocol">
     </div>
-  
-    <div class="w3-col m3">
+
+    <div class="w3-col m3 box">
       <img src="resim/detroit.jpg" onclick="onClick(this)" alt="Detroit Become Human">
-    </div>
-  </div>
-<!--  -->
-  <div class="game-container">
-    <div class="w3-col m3">
-      <img src="resim/doom ethernal.jpg" onclick="onClick(this)" alt="Doom Ethernal">
-    </div>
-  
-    <div class="w3-col m3">
-      <img src="resim/days gone.jpg" onclick="onClick(this)" alt="Days Gone">
-    </div>
-  
-    <div class="w3-col m3">
-      <img src="resim/little.jpg" onclick="onClick(this)" alt="Little Nightmares">
-    </div>
-  
-    <div class="w3-col m3">
-      <img src="resim/need for speed.jpg" onclick="onClick(this)" alt="Need For Speed">
     </div>
   </div>
   <!--  -->
   <div class="game-container">
     <div class="w3-col m3">
+      <img src="resim/doom ethernal.jpg" onclick="onClick(this)" alt="Doom Ethernal">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/days gone.jpg" onclick="onClick(this)" alt="Days Gone">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/little.jpg" onclick="onClick(this)" alt="Little Nightmares">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/need for speed.jpg" onclick="onClick(this)" alt="Need For Speed">
+    </div>
+  </div>
+  <!--  -->
+  <div class="game-container">
+    <div class="w3-col m3 box">
       <img src="resim/witcher.jpg" onclick="onClick(this)" alt="Witcher Wild Hunt 3">
     </div>
-  
-    <div class="w3-col m3">
+
+    <div class="w3-col m3 box">
       <img src="resim/rdr2.jpg" onclick="onClick(this)" alt="Red Dead Redemption 2">
     </div>
-  
-    <div class="w3-col m3">
-      <img src="resim/persona-5-persona-series-phantom-thieves-wallpaper-preview.jpg" onclick="onClick(this)" alt="Persona 5">
+
+    <div class="w3-col m3 box">
+      <img src="resim/persona-5-persona-series-phantom-thieves-wallpaper-preview.jpg" onclick="onClick(this)"
+        alt="Persona 5">
     </div>
-  
-    <div class="w3-col m3">
+
+    <div class="w3-col m3 box">
       <img src="resim/watch dogs.jpg" onclick="onClick(this)" alt="Watch Dogs">
     </div>
   </div>
-<!--  -->
-<div class="game-container" style="margin-bottom:30px;">
-  <div class="w3-col m3">
-    <img src="resim/second son.jpg" onclick="onClick(this)" alt="İnfeamus Second son">
-  </div>
+  <!--  -->
+  <div class="game-container" style="margin-bottom:30px;">
+    <div class="w3-col m3 box">
+      <img src="resim/second son.jpg" onclick="onClick(this)" alt="İnfeamus Second son">
+    </div>
 
-  <div class="w3-col m3">
-    <img src="resim/ratchet.jpg" onclick="onClick(this)" alt="Red Dead Redemption 2">
-  </div>
+    <div class="w3-col m3 box">
+      <img src="resim/ratchet.jpg" onclick="onClick(this)" alt="Red Dead Redemption 2">
+    </div>
 
-  <div class="w3-col m3">
-    <img src="resim/wrc.jpg" onclick="onClick(this)" alt="WRC 9">
-  </div>
+    <div class="w3-col m3 box">
+      <img src="resim/wrc.jpg" onclick="onClick(this)" alt="WRC 9">
+    </div>
 
-  <div class="w3-col m3">
-    <img src="resim/alien.jpg" onclick="onClick(this)" alt="Alien:İsolation">
+    <div class="w3-col m3 box">
+      <img src="resim/alien.jpg" onclick="onClick(this)" alt="Alien:İsolation">
+    </div>
   </div>
-</div>
 
 
   <!-- Modal for full size images on click-->
@@ -271,8 +286,8 @@
   <div class="w3-content w3-container w3-padding-64" id="contact">
     <div class="w3-row w3-padding-32 w3-section">
       <div class="w3-col m4 w3-container">
-        <img src="resim/alien.jpg" style="border-radius: 50px;" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
-          width="500" height="333">
+        <img src="resim/alien.jpg" style="border-radius: 50px;"
+          class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
       </div>
       <div class="w3-col m8 w3-panel">
         <div class="w3-large w3-margin-bottom">
@@ -281,16 +296,19 @@
           <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@gmail.com<br>
         </div>
         <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-        <form action="/action_page.php" target="_blank">
+        <form>
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name  Surname" required name="Name">
+              <input style="border-radius: 30px;" class="w3-input w3-border" type="text" placeholder="Name  Surname"
+                required name="Name">
             </div>
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              <input style="border-radius: 30px;" class="w3-input w3-border" type="text" placeholder="Email" required
+                name="Email">
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <input style="border-radius: 30px;" class="w3-input w3-border" type="text" placeholder="Message" required
+            name="Message">
           <button class="w3-button w3-black w3-right w3-section" type="submit">
             <i class="fa fa-paper-plane"></i> SEND MESSAGE</button>
         </form>
@@ -311,7 +329,7 @@
       <i class="fa fa-twitter w3-hover-opacity"></i>
       <i class="fa fa-linkedin w3-hover-opacity"></i>
     </div>
-    <p>Powered by <b>Darkness Gaming</b></p>
+    <p>Powered by <i><b>Darkness Gaming</b></i></p>
   </footer>
 
   <script>
@@ -344,7 +362,7 @@
       }
     }
   </script>
-</div>
+  </div>
 
 
 </body>
