@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <title>Oyunlar Sitesi</title>
   <meta charset="UTF-8">
@@ -7,7 +8,19 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
   <style>
+    div.scroll-container {
+      background-color: #333;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 10px;
+    }
+
+    div.scroll-container img {
+      padding: 10px;
+    }
+
     .box {
       margin-top: auto;
       width: 300px;
@@ -20,7 +33,13 @@
       z-index: 1;
     }
 
-    body,h1,h2,h3,h4,h5,h6 {
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: "Lato", sans-serif;
     }
 
@@ -99,6 +118,11 @@
       background-color: black;
       color: white;
     }
+    .kategory{
+      text-align: center;
+      color: white;
+      font-family: 'Alfa Slab One';font-size: 22px;
+    }
   </style>
 </head>
 
@@ -111,10 +135,13 @@
         onclick="toggleFunction()" title="Toggle Navigation Menu">
         <i class="fa fa-bars"></i>
       </a>
-      <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-      <a href="hakkında.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-      <a href="#games" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>GAMES</a>
-      <button class="w3-bar-item w3-button w3-hide-small" onclick="toggleDarkMode()">CHANGE MODE</button>
+      <a href="index.html" class="w3-bar-item w3-button" style="border-radius: 30px;">HOME</a>
+      <a href="hakkında.html" class="w3-bar-item w3-button w3-hide-small" style="border-radius: 30px;"><i
+          class="fa fa-user"></i> ABOUT</a>
+      <a href="#games" class="w3-bar-item w3-button w3-hide-small" style="border-radius: 30px;"><i
+          class="fa fa-th"></i>GAMES</a>
+      <button class="w3-bar-item w3-button w3-hide-small" style="border-radius: 30px;" onclick="toggleDarkMode()">CHANGE
+        MODE</button>
       <script>
         var isDarkMode = false;
 
@@ -150,8 +177,9 @@
   <!-- First Parallax Image with Logo Text -->
   <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-      <a href="oyunlar.html" style="text-decoration: none;"><span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WELCOME<span
-          class="w3-hide-small"> TO</span> GAMES SİTE </span></a>
+      <a href="oyunlar.html" style="text-decoration: none;"><span
+          class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WELCOME<span
+            class="w3-hide-small"> TO</span> GAMES SİTE </span></a>
     </div>
   </div>
 
@@ -184,6 +212,16 @@
 
 
   <!--games-->
+
+    <div style="margin-top: 30px;" class="scroll-container">
+      <p style="margin-bottom:auto;" class="kategory">Action Game</p>
+        <img class="" src="resim/calisto.jpg" alt="calisto protocol" width="600" height="400">
+        <img class="" src="resim/call of duty.jpg" alt="call of duty" width="600" height="400">
+        <img class="" src="resim/days gone.jpg" alt="days gone" width="600" height="400">
+        <img class="" src="resim/crysis.jpg" alt="crysis" width="600" height="400">
+        <img src="resim/doom ethernal.jpg" alt="doom ethernal" width="600px" height="400">
+      </div>
+
   <div class="game-container" style="margin-top: 30px;">
     <div class="w3-col m3 box">
       <img src="resim/ghost of.png" onclick="onClick(this)" alt="Ghost Of Tsushima">
