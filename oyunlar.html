@@ -124,6 +124,11 @@
       color: white;
       font-family: 'Alfa Slab One';font-size: 22px;
     }
+    .text1{
+      text-align: center;
+      font-family: 'Alfa Slab One';font-size: 22px;
+      color: darkred;
+    }
   </style>
 </head>
 
@@ -153,11 +158,9 @@
           if (isDarkMode) {
             element.style.backgroundColor = "#202121";
             element.style.color = "white";
-            // Diğer stiller
           } else {
-            element.style.backgroundColor = "white"; // Eski renginizi burada belirtin
-            element.style.color = "black"; // Eski renginizi burada belirtin
-            // Diğer stiller
+            element.style.backgroundColor = "white";
+            element.style.color = "black";
           }
         }
       </script>
@@ -214,41 +217,85 @@
 
   <!--games-->
 
-  <div style="margin-top: 30px;" class="scroll-container">
-    <div style="background-attachment: fixed;"><p style="margin-bottom:auto;" class="kategory">Action Game</p></div>
-    <img src="resim/calisto.jpg" alt="calisto protocol" width="600" height="400">
-    <img src="resim/call of duty.jpg" alt="call of duty" width="600" height="400">
-    <img src="resim/days gone.jpg" alt="days gone" width="600" height="400">
-    <img src="resim/crysis.jpg" alt="crysis" width="600" height="400">
-    <img src="resim/doom ethernal.jpg" alt="doom ethernal" width="600" height="400">
-</div>
-<!--  -->
-<div class="scroll-container">
-  <div style="background-attachment: fixed;"><p style="margin-bottom:auto;" class="kategory">Fear Game</p></div>
-  <img src="resim/alien.jpg" alt="calisto protocol" width="600" height="400">
-  <img src="resim/dead space.jpg" alt="call of duty" width="600" height="400">
-  <img src="resim/days gone.jpg" alt="days gone" width="600" height="400">
-  <img src="resim/little.jpg" alt="crysis" width="600" height="400">
-  <img src="resim/resident evil.jpg" alt="doom ethernal" width="600" height="400">
-</div>
-  <!--  -->
-  <div class="scroll-container">
-    <div style="background-attachment: fixed;"><p style="margin-bottom:auto;" class="kategory">Advanture Game</p></div>
-    <img src="resim/rdr2.jpg" alt="calisto protocol" width="600" height="400">
-    <img src="resim/witcher.jpg" alt="call of duty" width="600" height="400">
-    <img src="resim/persona-5-persona-series-phantom-thieves-wallpaper-preview.jpg" alt="days gone" width="600" height="400">
-    <img src="resim/second son.jpg" alt="crysis" width="600" height="400">
-    <img src="resim/ratchet.jpg" alt="doom ethernal" width="600" height="400">
+  <!-- action -->
+  <div class="text1"><p>action</p></div>
+  <div class="game-container" style="margin-top: 30px; background-color: gray;">
+    <div class="w3-col m3 box">
+      <img src="resim/doom ethernal.jpg" onclick="onClick(this)" alt="Ghost Of Tsushima">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/call of duty.jpg" onclick="onClick(this)" alt="Call Of Duty Modern Warfare">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/calisto.jpg" onclick="onClick(this)" alt="Calisto Protocol">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/ratchet.jpg" onclick="onClick(this)" alt="Detroit Become Human">
+    </div>
   </div>
-  <!--  -->
-  <div style="margin-bottom: 30px;" class="scroll-container">
-    <div style="background-attachment: fixed;"><p style="margin-bottom:auto;" class="kategory">Race Game</p></div>
-    <img src="resim/need for speed.jpg" alt="calisto protocol" width="600" height="400">
-    <img src="resim/wrc.jpg" alt="call of duty" width="600" height="400">
-    <img src="resim/days gone.jpg" alt="days gone" width="600" height="400">
-    <img src="resim/little.jpg" alt="crysis" width="600" height="400">
-    <img src="resim/resident evil.jpg" alt="doom ethernal" width="600" height="400">
+  <!-- adventure -->
+  <div class="text1"><p>Aventure Games</p></div>
+  <div class="game-container" style=" background-color: gray;">
+    <div class="w3-col m3 box">
+      <img src="resim/persona-5-persona-series-phantom-thieves-wallpaper-preview.jpg" onclick="onClick(this)" alt="Ghost Of Tsushima">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/elden ring.jpg" onclick="onClick(this)" alt="Call Of Duty Modern Warfare">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/witcher.jpg" onclick="onClick(this)" alt="Calisto Protocol">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/rdr2.jpg" onclick="onClick(this)" alt="Detroit Become Human">
+    </div>
   </div>
+  <!-- fear -->
+  <div class="text1"><p>Fear Games</p></div>
+    <div class="game-container" style=" background-color: gray;">
+    <div class="w3-col m3 box">
+      <img src="resim/resident evil.jpg" onclick="onClick(this)" alt="Ghost Of Tsushima">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/days gone.jpg" onclick="onClick(this)" alt="Call Of Duty Modern Warfare">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/alien.jpg" onclick="onClick(this)" alt="Calisto Protocol">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/little.jpg" onclick="onClick(this)" alt="Detroit Become Human">
+    </div>
+  </div>
+  <!-- rece -->
+  <div class="text1"><p>Race Games</p></div>
+  <div class="game-container" style="margin-bottom: 30px; background-color: gray;">
+    <div class="w3-col m3 box">
+      <img src="resim/wrc.jpg" onclick="onClick(this)" alt="Ghost Of Tsushima">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/need for speed.jpg" onclick="onClick(this)" alt="Call Of Duty Modern Warfare">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/calisto.jpg" onclick="onClick(this)" alt="Calisto Protocol">
+    </div>
+
+    <div class="w3-col m3 box">
+      <img src="resim/detroit.jpg" onclick="onClick(this)" alt="Detroit Become Human">
+    </div>
+  </div>
+
+
+
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
     <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
@@ -300,22 +347,6 @@
     </div>
   </div>
 
-
-
-  <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <div class="w3-xlarge w3-section">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    <p>Powered by <i><b>Darkness Gaming</b></i></p>
-  </footer>
-
   <script>
     // Modal Image Gallery
     function onClick(element) {
@@ -346,9 +377,22 @@
       }
     }
   </script>
+
+
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey" style="border-radius: 30px;"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>Powered by <i><b>Darkness Gaming</b></i></p>
+  </footer>
   </div>
-
-
 </body>
-
 </html>

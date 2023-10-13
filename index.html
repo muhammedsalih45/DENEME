@@ -8,12 +8,27 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+    .button {
+  padding: 15px ;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
     .box {
       transition: 1s;
     }
 
     .box:hover {
-      transform: scale(1.1);
+      transform: scale(1.03);
       z-index: 1;
     }
 
@@ -312,10 +327,26 @@
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+      <a href="hakkında.html" class="w3-bar-item w3-button" style="border-radius: 30px;" onclick="toggleFunction()">ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" style="border-radius: 30px;" onclick="toggleFunction()">GAMES</a>
+      <a href="oyunlar.html" class="w3-bar-item w3-button" style="border-radius: 30px;" onclick="toggleFunction()">FOR MORE</a>
+      <button class="w3-bar-item w3-button" style="margin-top: auto; border-radius: 30px;" onclick="toggleDarkMode()">CHANGE MODE</button>
+<script>
+        function toggleDarkMode() {
+          var element = document.body;
+          isDarkMode = !isDarkMode;
+
+          if (isDarkMode) {
+            element.style.backgroundColor = "#202121";
+            element.style.color = "white";
+
+          } else {
+            element.style.backgroundColor = "white";
+            element.style.color = "black";
+
+          }
+        }
+</script>
     </div>
   </div>
 
@@ -444,7 +475,7 @@
         <img src="resim/little.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Little Nightmares">
       </div>
-      <a href="oyunlar.html"><button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px; ">FOR
+      <a href="oyunlar.html"><button class="w3-button w3-padding-large w3-light-grey button" style="margin-top:64px; ">FOR
           MORE</button></a>
     </div>
   </div>
@@ -496,18 +527,16 @@
           </div>
           <input style="border-radius: 30px;" class="w3-input w3-border" type="text" placeholder="Message" required
             name="Message">
-          <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <button class="w3-button w3-black w3-right w3-section button" type="submit">
             <i class="fa fa-paper-plane"></i> SEND MESSAGE</button>
         </form>
       </div>
     </div>
   </div>
 
-
-
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <a href="#home" class="w3-button w3-light-grey button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <div class="w3-xlarge w3-section">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
       <i class="fa fa-instagram w3-hover-opacity"></i>
